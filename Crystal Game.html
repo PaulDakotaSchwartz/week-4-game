@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!-- declares the language using the lang attribute, "en-us" is for American English -->
+<html lang="en-us">
+
+<head>
+  <!-- Unicode Transformation Format (UTF), -->
+  <meta charset="UTF-8">
+  <title>The Crystal Game</title>
+  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+  
+  <!-- hyperlink ref for bootstrap CSS-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- hyperlink ref for bootstrap JavaScript JQuery (DOES NOT APPEAR TO BE SET UP CORRECTLY)-->
+  <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
+
+  <!-- jquery library link -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <!-- link to the javascript file -->
+  <script type="text/javascript" src="assets/javascript/CrystalGame.js"></script>
+
+  <!-- link to the style.css file -->
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+  <!-- link to the reset.css file (THIS IS CLEARING ALL FORMATTING WHICH I DONT WANT ATM) -->
+  <!-- <link rel="stylesheet" type="text/css" href="assets/css/reset.css"> -->
+</head>
+
+<body>
+  <!-- The title of the page, need to polish the formatting to look like the assignment-->
+  <h1 id="title">CrystalsCollector!</h1>
+
+  <!-- Container for the game instructions, need to polish the formatting to look like the assignment-->  <div id="instructions">
+  	<p>You will be given a random number at the start of the game.</p>
+  	<p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>  
+  	<p>You win the game by matching your total score to random number, you lose the game if your total score goes above the random number.</p>
+  	<p>The value of each crystal is hidden from you until you click on it.</p>
+  	<p>Each time when the game starts, the game will change the values of each crystal</p>
+  </div>
+
+  <!-- This is the display for the number we are trying to match in HTML. It initially displays the first random number generated for the game. Need to polish the formatting to look like the assignment -->
+  <div id="random-number"></div>
+
+  <!-- This is the display for the win loss counter in HTML. It initially displays wins and losses set at 0. Need to polish the formatting to look like the assignment, need an empty place holder for span reporter -->
+  <div id="win-loss-reporter">
+  	<p><span id="reporter"></span></p>
+  	<p>Wins: <span id="wins-so-far">0</span></p>
+  	<p>Losses: <span id="losses-so-far">0</span></p>
+  </div>
+
+  <!-- This is the display for the crystal images, need to polish the formatting to look like the assignment. -->
+  <div id="crystal-buttons">
+  	<button><img class="crystal" id="red" src="assets/images/red.png"></button>
+  	<button><img class="crystal" id="blue" src="assets/images/blue.png"></button>
+  	<button><img class="crystal" id="yellow" src="assets/images/yellow.png"></button>
+  	<button><img class="crystal" id="green" src="assets/images/green.png"></button>
+  </div>
+
+  <!-- This is where we will post the total score. Initially nothing is shown. Need to polish the formatting to look like the assignment. -->
+  <div id="total-score-display">
+  	<div class=score-display><span>Your total score is:</span></div>
+  	<div class=score-display><span id="current-total"></span></div>
+  </div>
+</body>
+
+</html>
